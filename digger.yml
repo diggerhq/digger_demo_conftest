@@ -7,6 +7,11 @@ projects:
   workflow: my_custom_workflow
 workflows:
   my_custom_workflow:
+    plan:
+      steps:
+      - init:
+      - plan
+      - run: "conftest test ./prod.json -p ../policies"
     workflow_configuration:
       on_pull_request_pushed: [digger plan]
       on_pull_request_closed: [digger unlock]
