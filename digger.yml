@@ -1,9 +1,9 @@
 projects:
 - name: prod
   dir: prod
-  workflow: my_custom_workflow
+  workflow: conftest_workflow
 workflows:
-  my_custom_workflow:
+  conftest_workflow:
     plan:
       steps:
       - init:
